@@ -85,7 +85,7 @@ namespace SNICKERS.Server.Migrations
                     ALGORITHM = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: false),
                     IS_X509_CERTIFICATE = table.Column<bool>(type: "NUMBER(1)", nullable: false),
                     DATA_PROTECTED = table.Column<bool>(type: "NUMBER(1)", nullable: false),
-                    DATA = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false)
+                    DATA = table.Column<string>(type: "NCLOB", maxLength: 50000, nullable: false)
                 },
                 constraints: table =>
                 {
